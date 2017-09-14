@@ -1,0 +1,8 @@
+<UI>
+  <Title>The mini-demo</Title>
+  <Input/>
+  <Container>
+    <Title>Story about the mini-demo</Title>
+    <Text>Every big idea begin with a demo, and this the demo of the mini-ui.</Text>
+  </Container>
+</UI>
