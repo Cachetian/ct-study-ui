@@ -11,3 +11,13 @@ The definition of sexy:
  * xml for UI modeling.
  * json for model modeling.
 * Resonpsive UX, never load more information than your needs.
+
+# ui-study moudles
+## bootstrap-ui
+Bootstrap UI technique.
+## mini-ui
+All customize, just use raw HTML & javascript technique, use minium line of code, expressing essential model structure.
+## model-ui
+Customized ui technique, model driven UI.
+## ui5-ui
+UI5 UI technique.

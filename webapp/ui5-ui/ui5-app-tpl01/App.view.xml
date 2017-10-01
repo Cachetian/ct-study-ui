@@ -1,0 +1,73 @@
+<mvc:View controllerName="com.cachetian.ui5app.App" xmlns="sap.m" xmlns:l="sap.ui.layout" xmlns:f="sap.ui.layout.form" xmlns:mvc="sap.ui.core.mvc">
+	<App afterNavigate="onAfterNavigate">
+		<pages>
+			<Page>
+				<content>
+					<Table inset="false" items="{
+						path: '/ItemCollection',
+						sorter: {
+							path: 'Name'
+						}
+					}">
+						<headerToolbar>
+							<Toolbar>
+								<Title text="Items" level="H2"/>
+							</Toolbar>
+						</headerToolbar>
+						<columns>
+							<Column width="12em">
+								<Text text="Item"/>
+							</Column>
+						</columns>
+						<items>
+							<ColumnListItem>
+								<cells>
+									<ObjectIdentifier title="{Name}" text="{ItemId}"/>
+								</cells>
+							</ColumnListItem>
+						</items>
+					</Table>
+				</content>
+				<footer>
+					<Toolbar>
+						<ToolbarSpacer/>
+						<Button text="Add" press="onPress_Add"/>
+						<Button text="Delete" type="Reject" press="onPress_Delete"/>
+					</Toolbar>
+				</footer>
+			</Page>
+			<Page showNavButton="true" navButtonPress="onPress_NavBack">
+				<content>
+					<f:SimpleForm
+						editable="false"
+						layout="ResponsiveGridLayout"
+						title="Item"
+						labelSpanXL="3"
+						labelSpanL="3"
+						labelSpanM="3"
+						labelSpanS="12"
+						adjustLabelSpan="false"
+						emptySpanXL="4"
+						emptySpanL="4"
+						emptySpanM="4"
+						emptySpanS="0"
+						columnsXL="1"
+						columnsL="1"
+						columnsM="1"
+						singleContainerFullSize="false">
+						<f:content>
+							<Label text="Name"/>
+							<Text text="{Name}"/>
+						</f:content>
+					</f:SimpleForm>
+				</content>
+				<footer>
+					<Toolbar>
+						<ToolbarSpacer/>
+						<Button text="Save" press="onPress_Save"/>
+					</Toolbar>
+				</footer>
+			</Page>
+		</pages>
+	</App>
+</mvc:View>
