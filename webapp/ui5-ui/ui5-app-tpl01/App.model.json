@@ -1,0 +1,17 @@
+{
+  "config": {
+
+  },
+  "mockdata": {
+    "ItemCollection": [{
+        "Name": "ItemA"
+      },
+      {
+        "Name": "ItemB"
+      },
+      {
+        "Name": "ItemC"
+      }
+    ]
+  }
+}

@@ -1,7 +1,7 @@
 <mvc:View controllerName="com.cachetian.ui5app.App" xmlns="sap.m" xmlns:l="sap.ui.layout" xmlns:f="sap.ui.layout.form" xmlns:mvc="sap.ui.core.mvc">
 	<App afterNavigate="onAfterNavigate">
 		<pages>
-			<Page>
+			<Page showHeader="false">
 				<content>
 					<Table inset="false" items="{
 						path: '/ItemCollection',

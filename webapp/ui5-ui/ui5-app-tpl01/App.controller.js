@@ -11,18 +11,16 @@ sap.ui.define([
 		onInit : function () {
 			jQuery.sap.require("sap.m.MessageBox");
 			// set data model on view
-			var oData = {
-				recipient : {
-					name : "World"
-				}
-			};
-			var oModel = new JSONModel(oData);
-			this.getView().setModel(oModel);
+			var that = this;
+			jQuery.getJSON( "App.model.json", function( oData ){
+				var oModel = new JSONModel(oData.mockdata);
+				that.getView().setModel(oModel);
+			});
 		},
 
 		onPress_Add : function () {
-			var target = this.oView.getContent()[0].getPages()[1];
-			this.oView.getContent()[0].to(target);
+			var target = this.getView().getContent()[0].getPages()[1];
+			this.getView().getContent()[0].to(target);
 		},
 
 		onPress_Save : function () {
