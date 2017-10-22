@@ -18,6 +18,19 @@ sap.ui.define([
 			});
 		},
 
+		onPress_Item: function(evt){
+			// navigation
+			var target = this.getView().getContent()[0].getPages()[1];
+			this.getView().getContent()[0].to(target);
+
+			// data binding
+			var oSelectedItem = evt.getSource();
+			var oContext = oSelectedItem.getBindingContext();
+			var sPath = oContext.getPath();
+			var oItemForm = this.getView().byId("itemForm");
+			oItemForm.bindElement({ path: sPath});
+		},
+
 		onPress_Add : function () {
 			var target = this.getView().getContent()[0].getPages()[1];
 			this.getView().getContent()[0].to(target);

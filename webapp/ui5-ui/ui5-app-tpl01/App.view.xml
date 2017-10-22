@@ -20,7 +20,7 @@
 							</Column>
 						</columns>
 						<items>
-							<ColumnListItem>
+							<ColumnListItem type="Navigation" press="onPress_Item">
 								<cells>
 									<ObjectIdentifier title="{Name}" text="{ItemId}"/>
 								</cells>
@@ -39,6 +39,7 @@
 			<Page showNavButton="true" navButtonPress="onPress_NavBack">
 				<content>
 					<f:SimpleForm
+						id="itemForm"
 						editable="false"
 						layout="ResponsiveGridLayout"
 						title="Item"
@@ -56,6 +57,9 @@
 						columnsM="1"
 						singleContainerFullSize="false">
 						<f:content>
+							<Title text="Basic Information" />
+							<Label text="ID"/>
+							<Text text="{ItemId}"/>
 							<Label text="Name"/>
 							<Text text="{Name}"/>
 						</f:content>
