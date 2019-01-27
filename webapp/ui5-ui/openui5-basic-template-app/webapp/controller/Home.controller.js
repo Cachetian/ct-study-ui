@@ -10,7 +10,7 @@ sap.ui.define([
     formatter: formatter,
 
     onInit: function() {
-
+      sap.ui.getCore().getEventBus().subscribe("chanel1", "event1", this.onEvent1, this);
     },
 
     onConfirm: function() {
@@ -19,6 +19,16 @@ sap.ui.define([
       }).catch(function() {
         sap.m.MessageToast.show("No");
       });
+    },
+
+    onPublish: function(oEvent) {
+      sap.ui.getCore().getEventBus().publish("chanel1", "event1", {
+        param1: "value1"
+      });
+    },
+
+    onEvent1: function(param) {
+      sap.m.MessageToast.show("param:" + param);
     },
 
     //
