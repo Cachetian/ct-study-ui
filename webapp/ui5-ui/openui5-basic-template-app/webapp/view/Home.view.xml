@@ -1,0 +1,19 @@
+<mvc:View
+	controllerName="sap.ui.demo.basicTemplate.controller.Home"
+	displayBlock="true"
+	xmlns="sap.m"
+	xmlns:mvc="sap.ui.core.mvc">
+	<Page
+		id="page"
+		title="{i18n>title}">
+		<content></content>
+		<footer>
+			<OverflowToolbar>
+					<Button text="Confirm" press="onConfirm"/>
+					<Button text="Publish" press="onPublish"/>
+					<Button text="Message Dialog" press="onMessageDialog"/>
+					<Button text="Message Dialog" press="onMessageDialog"/>
+			</OverflowToolbar>
+		</footer>
+	</Page>
+</mvc:View>
