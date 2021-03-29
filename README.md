@@ -21,3 +21,10 @@ All customize, just use raw HTML & javascript technique, use minimum line of cod
 Customized ui technique, model driven UI.
 ## ui5-ui
 UI5 UI technique.
+
+## Referencing Links
+https://www.digitalocean.com/community/tutorials/how-to-create-a-web-server-in-node-js-with-the-http-module
+https://github.com/livereload/livereload-js
+https://github.com/tapio/live-server
+https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer
+http://gsnedders.html5.org/outliner/
